@@ -1,18 +1,61 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Flashy Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    main {
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin: 0;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: #4b6cb7;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚀 Welcome to My Blog</h1>
+    <p>Sharing thoughts, projects, and everything in between</p>
+  </header>
+  <main>
+    <h2>📝 Recent Posts</h2>
+    <ul>
+      <li><a href="/_posts/2025-06-25-my-first-post.md">My First Post</a></li>
+      <li><a href="/_posts/2025-06-26-my-second-post.md">My Second Post</a></li>
+    </ul>
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+    <h2>📌 About Me</h2>
+    <p>I’m Joel, and this is my digital notebook for science, AI, and whatever I’m curious about.</p>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+    <a href="/about.html" class="button">Learn More</a>
+  </main>
+</body>
+</html>
